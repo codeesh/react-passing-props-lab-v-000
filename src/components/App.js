@@ -1,7 +1,22 @@
-import React from 'react';
+import React, { Component }  from 'react';
 
 import FruitBasket from './FruitBasket';
 
-const App = () => <FruitBasket />;
+export default class App extends Component {
+  constructor(){
+    super();
+    this.state={
+      fruit: [],
+      filters:[],
+      currentFilter: null
+    }
+  }
 
-export default App;
+  render(){
+    return(
+      <FruitBasket/>
+    )
+  }
+
+
+}
